@@ -1,0 +1,34 @@
+.holder {
+	background-color: rgba(51, 51, 51, 0.5);
+	padding: 16px;
+	color: white;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all ease 0.3s;
+}
+.holder-data {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.holder-data p,
+.holder-wallet-data p {
+	width: 20%;
+	text-align: center;
+}
+.holder:hover {
+	background-color: rgba(51, 51, 51, 1);
+	transform: scale(101%);
+}
+.holder-wallet-data {
+	margin-top: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.holder-wallet-data p {
+	color: rgb(255, 94, 255);
+}
