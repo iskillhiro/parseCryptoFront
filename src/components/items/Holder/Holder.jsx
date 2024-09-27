@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { axiosDB } from '../../../utils/axiosDB'
 import './Holder.css'
 export default function Holder({ holder }) {
-	const [walletId, setWalletId] = useState(holder.account._id)
+	const [walletId, setWalletId] = useState(null)
 	const [walletDataActive, setWalletDataActive] = useState(false)
 	const [walletData, setWalletData] = useState({
 		totalTransactions: [],
@@ -12,8 +12,11 @@ export default function Holder({ holder }) {
 
 	const getWalletData = async () => {
 		try {
-			const response = await axiosDB.get(`/wallet/${walletId}`)
-			return response.data
+			setWalletId(holder.account._id)
+			if (walletId) {
+				const response = await axiosDB.get(`/wallet/${walletId}`)
+				return response.data
+			}
 		} catch (e) {
 			alert(e)
 		}
