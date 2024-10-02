@@ -8,13 +8,11 @@ export default function Holders({ allHolders }) {
 				<strong>Wallet</strong>
 				<strong>Amount</strong>
 				<strong>Percentage</strong>
+				<strong>Balance</strong>
 			</div>
-			{allHolders.allHolders
-				.slice()
-				.reverse()
-				.map((holder, index) => (
-					<Holder key={index} holder={holder} />
-				))}
+			{allHolders.allHolders.slice().map((holder, index) => (
+				<Holder key={index} holder={holder} />
+			))}
 		</div>
 	)
 }

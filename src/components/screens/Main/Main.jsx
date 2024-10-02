@@ -20,10 +20,8 @@ export default function Main() {
 		fetchData()
 	}, [])
 
-	console.log(allHolders)
-
 	if (loading) {
-		return <p>Loading holders...</p>
+		return <div className='loader'></div>
 	}
 
 	return (
