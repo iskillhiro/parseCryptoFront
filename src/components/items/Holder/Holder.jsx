@@ -9,8 +9,9 @@ export default function Holder({ holder }) {
 				</p>
 				<p>{holder?.amount.toFixed(2)}</p>
 				<p>{holder?.percentage.toFixed(2)}</p>
+				<p>{holder?.tokens}</p>
 				<p>
-					{holder?.balance.toFixed(2)}({holder?.usd_balance} $)
+					{holder?.balance.toFixed(2)}({holder?.balance_usd.toFixed(2)}$)
 				</p>
 			</div>
 		</div>

@@ -21,7 +21,7 @@ export default function Main() {
 	}, [])
 
 	if (loading) {
-		return <div className='loader'></div>
+		return <p>Loading holders...</p>
 	}
 
 	return (
